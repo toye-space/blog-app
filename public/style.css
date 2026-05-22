@@ -1,0 +1,233 @@
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+/* === NAV === */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6c63ff;
+}
+
+/* === BUTTONS === */
+.btn {
+  background-color: #6c63ff;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #574fd6;
+}
+
+.btn-cancel {
+  background: none;
+  border: 1px solid #333;
+  color: #aaaaaa;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-cancel:hover {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+/* === FORM OVERLAY === */
+.form-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.form-overlay.active {
+  display: flex;
+}
+
+.form-box {
+  background-color: #111111;
+  border: 1px solid #333;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 560px;
+}
+
+.form-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  color: #6c63ff;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #aaaaaa;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: #0a0a0a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 12px;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #6c63ff;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.feedback {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: #ff6b6b;
+}
+
+/* === POSTS SECTION === */
+.posts-section {
+  padding: 60px;
+}
+
+.posts-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #6c63ff;
+}
+
+.subtitle {
+  color: #aaaaaa;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+/* === POSTS GRID === */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.post-card {
+  background-color: #111111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 28px;
+  transition: border-color 0.3s;
+}
+
+.post-card:hover {
+  border-color: #6c63ff;
+}
+
+.post-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.post-card p {
+  color: #aaaaaa;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.post-meta {
+  font-size: 0.8rem;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn {
+  background: none;
+  border: 1px solid #6c63ff;
+  color: #6c63ff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: #6c63ff;
+  color: #ffffff;
+}
+
+.delete-btn {
+  background: none;
+  border: 1px solid #333;
+  color: #aaaaaa;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+}
+
+.delete-btn:hover {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.empty-state {
+  color: #aaaaaa;
+  font-size: 1rem;
+  text-align: center;
+  padding: 60px 0;
+  grid-column: 1 / -1;
+}
